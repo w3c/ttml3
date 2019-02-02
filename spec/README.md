@@ -1,12 +1,12 @@
-# How to build TTML2
+# How to build TTML3
 
-To build TTML2 spec, you need to have Apache ant installed.
+To build TTML3 spec, you need to have Apache ant installed.
 
 ## Using github
 
 1. Checkout an up to date branch (e.g. `master`).
 3. Edit `ttml.xml`
-4. `ant build` - the build artefacts are stored in the `/spec/build` directory, e.g. `index.html` is the TTML2 HTML specification.
+4. `ant build` - the build artefacts are stored in the `/spec/build` directory, e.g. `index.html` is the TTML3 HTML specification.
 5. If more edits, go to 3.
 6. Create and submit your Pull Request. Note that build artefacts are git ignored.
 7. Travis CI will create the build artefacts and push them to a branch with the same name, with `-build` appended.
