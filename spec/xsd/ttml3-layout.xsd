@@ -4,13 +4,13 @@
   xmlns:tt="http://www.w3.org/ns/ttml"
   xmlns:ttm="http://www.w3.org/ns/ttml#metadata"
   xmlns:tts="http://www.w3.org/ns/ttml#styling">
-  <xs:include schemaLocation="ttml2-core-attribs.xsd"/>
-  <xs:include schemaLocation="ttml2-timing-attribs.xsd"/>
-  <xs:include schemaLocation="ttml2-metadata.xsd"/>
-  <xs:include schemaLocation="ttml2-animation.xsd"/>
-  <xs:include schemaLocation="ttml2-styling.xsd"/>
+  <xs:include schemaLocation="ttml3-core-attribs.xsd"/>
+  <xs:include schemaLocation="ttml3-timing-attribs.xsd"/>
+  <xs:include schemaLocation="ttml3-metadata.xsd"/>
+  <xs:include schemaLocation="ttml3-animation.xsd"/>
+  <xs:include schemaLocation="ttml3-styling.xsd"/>
   <xs:import namespace="http://www.w3.org/ns/ttml#styling"
-    schemaLocation="ttml2-styling-attribs.xsd"/>
+    schemaLocation="ttml3-styling-attribs.xsd"/>
   <xs:attributeGroup name="RegionBinding.attrib.class">
     <xs:attribute name="region" type="xs:IDREF"/>
   </xs:attributeGroup>

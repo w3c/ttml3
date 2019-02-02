@@ -16,19 +16,19 @@ as part of the W3C <loc href="http://www.w3.org/2008/WebVideo/">Video in the Web
 following the procedures set out for the W3C <loc href="https://www.w3.org/Consortium/Process/">Process</loc>.
 The authors of this document are listed in the header of this document.</p>
 
-<p>An <loc href="https://www.w3.org/wiki/TimedText/TTML2ImplementationReport">implementation
+<p>An <loc href="https://www.w3.org/wiki/TimedText/TTML3ImplementationReport">implementation
 report</loc> demonstrates that the specification is implementable.
-A cumulative summary of all changes from TTML1, 3rd Edition, <bibref ref="ttml1"/>
-is available at <loc href="ttml2-changes.html">Timed Text Markup Language 2 (TTML2)
+A cumulative summary of all changes from TTML2, 2nd Edition, <bibref ref="ttml2-2e"/>
+is available at <loc href="ttml3-changes.html">Timed Text Markup Language 3 (TTML3)
 Change Summary</loc>.  An abbreviated list of changes affecting
-language syntax can be found at <specref ref="changes-from-ttml1-vocabulary"/>.</p>
+language syntax can be found at <specref ref="changes-from-ttml2-vocabulary"/>.</p>
 
 <p>Comments about this document are welcome by filing
-an <loc href="https://github.com/w3c/ttml2/issues">issue on GitHub</loc> or sending email
+an <loc href="https://github.com/w3c/ttml3/issues">issue on GitHub</loc> or sending email
 to <loc href="mailto:public-tt@w3.org">public-tt@w3.org</loc>
 (<loc href="mailto:public-tt-request@w3.org?subject=subscribe">subscribe</loc>,
 <loc href="http://lists.w3.org/Archives/Public/public-tt/">archives</loc>)
-with a subject line starting with <code>[ttml2]</code>.</p>
+with a subject line starting with <code>[ttml3]</code>.</p>
 
 <p>This document has been reviewed by W3C Members, by software
 developers, and by other W3C groups and interested parties, and is

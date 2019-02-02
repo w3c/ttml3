@@ -9,7 +9,7 @@
 
 <!ENTITY draft.date "&draft.year;&draft.mm;&draft.dd;">
 
-<!ENTITY prefix "ttml2">
+<!ENTITY prefix "ttml3">
 
 <!ENTITY w3c.tr.latest  "https://www.w3.org/TR">	
 
@@ -22,9 +22,9 @@
 <!ENTITY document.role "editors-copy">
 
 <!-- The following is used for document .-->
-<!ENTITY document.status "W3C Proposed Recommendation">
-<!ENTITY w3c.status "PR">
-<!ENTITY doctype "pr">
+<!ENTITY document.status "W3C Working Draft">
+<!ENTITY w3c.status "WD">
+<!ENTITY doctype "wd">
 
 <!ENTITY w3c-designation "&latestedloc;">
 

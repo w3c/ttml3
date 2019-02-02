@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <jxb:bindings version="2.1" xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <jxb:bindings schemaLocation="ttml2-animation.xsd">
+  <jxb:bindings schemaLocation="ttml3-animation.xsd">
     <jxb:bindings node="//xs:complexType[@name='animate.eltype']">
       <jxb:class name="Animate"/>
     </jxb:bindings>
@@ -13,7 +13,7 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-content.xsd">
+  <jxb:bindings schemaLocation="ttml3-content.xsd">
     <jxb:bindings node="//xs:complexType[@name='body.eltype']">
       <jxb:class name="Body"/>
     </jxb:bindings>
@@ -31,7 +31,7 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-datatypes.xsd">
+  <jxb:bindings schemaLocation="ttml3-datatypes.xsd">
     <jxb:bindings node="//xs:simpleType[@name='metadataAgentType']">
       <jxb:typesafeEnumClass name="AgentType"/>
     </jxb:bindings>
@@ -43,13 +43,13 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-document.xsd">
+  <jxb:bindings schemaLocation="ttml3-document.xsd">
     <jxb:bindings node="//xs:complexType[@name='tt.eltype']">
       <jxb:class name="TimedText"/>
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-isd.xsd">
+  <jxb:bindings schemaLocation="ttml3-isd.xsd">
     <jxb:bindings node="//xs:complexType[@name='region.eltype']">
       <jxb:class name="ISDRegionEltype"/>
     </jxb:bindings>
@@ -58,7 +58,7 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-embedded.xsd">
+  <jxb:bindings schemaLocation="ttml3-embedded.xsd">
     <jxb:bindings node="//xs:complexType[@name='audio.eltype']">
       <jxb:class name="Audio"/>
     </jxb:bindings>
@@ -87,13 +87,13 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-head.xsd">
+  <jxb:bindings schemaLocation="ttml3-head.xsd">
     <jxb:bindings node="//xs:complexType[@name='head.eltype']">
       <jxb:class name="Head"/>
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-layout.xsd">
+  <jxb:bindings schemaLocation="ttml3-layout.xsd">
     <jxb:bindings node="//xs:complexType[@name='layout.eltype']">
       <jxb:class name="Layout"/>
     </jxb:bindings>
@@ -105,13 +105,13 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-metadata.xsd">
+  <jxb:bindings schemaLocation="ttml3-metadata.xsd">
     <jxb:bindings node="//xs:complexType[@name='metadata.eltype']">
       <jxb:class name="Metadata"/>
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-metadata-items.xsd">
+  <jxb:bindings schemaLocation="ttml3-metadata-items.xsd">
     <jxb:bindings node="//xs:complexType[@name='actor.eltype']">
       <jxb:class name="Actor"/>
     </jxb:bindings>
@@ -135,7 +135,7 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-parameter-items.xsd">
+  <jxb:bindings schemaLocation="ttml3-parameter-items.xsd">
     <jxb:bindings node="//xs:attributeGroup[@name='extension.attlist']">
       <jxb:bindings node="./xs:attribute[@name='value']">
         <jxb:property name="extensionValue"/>
@@ -163,7 +163,7 @@
     </jxb:bindings>
   </jxb:bindings>
 
-  <jxb:bindings schemaLocation="ttml2-styling.xsd">
+  <jxb:bindings schemaLocation="ttml3-styling.xsd">
     <jxb:bindings node="//xs:attributeGroup[@name='StyleBinding.attrib.class']/xs:attribute[@name='style']">
       <jxb:property name="styleAttribute"/>
     </jxb:bindings>

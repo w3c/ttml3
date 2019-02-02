@@ -5,7 +5,7 @@
   xmlns:ttp="http://www.w3.org/ns/ttml#parameter"
   xmlns:tta="http://www.w3.org/ns/ttml#audio">
   <xs:import namespace="http://www.w3.org/ns/ttml#datatype"
-    schemaLocation="ttml2-datatypes.xsd"/>
+    schemaLocation="ttml3-datatypes.xsd"/>
   <xs:attribute name="gain" type="ttd:gain"/>
   <xs:attribute name="pan" type="ttd:pan"/>
   <xs:attribute name="pitch" type="ttd:pitch"/>

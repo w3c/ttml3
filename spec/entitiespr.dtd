@@ -9,7 +9,7 @@
 
 <!ENTITY draft.date "&draft.year;&draft.mm;&draft.dd;">
 
-<!ENTITY prefix "ttml2">
+<!ENTITY prefix "ttml3">
 
 <!ENTITY w3c.tr.latest  "https://www.w3.org/TR">	
 

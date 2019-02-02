@@ -5,13 +5,13 @@
   xmlns:ttm="http://www.w3.org/ns/ttml#metadata"
   xmlns:ttp="http://www.w3.org/ns/ttml#parameter"
   xmlns:tts="http://www.w3.org/ns/ttml#styling">
-  <xs:include schemaLocation="ttml2-core-attribs.xsd"/>
-  <xs:include schemaLocation="ttml2-metadata.xsd"/>
-  <xs:include schemaLocation="ttml2-parameters.xsd"/>
-  <xs:include schemaLocation="ttml2-embedded.xsd"/>
-  <xs:include schemaLocation="ttml2-styling.xsd"/>
-  <xs:include schemaLocation="ttml2-layout.xsd"/>
-  <xs:include schemaLocation="ttml2-animation.xsd"/>
+  <xs:include schemaLocation="ttml3-core-attribs.xsd"/>
+  <xs:include schemaLocation="ttml3-metadata.xsd"/>
+  <xs:include schemaLocation="ttml3-parameters.xsd"/>
+  <xs:include schemaLocation="ttml3-embedded.xsd"/>
+  <xs:include schemaLocation="ttml3-styling.xsd"/>
+  <xs:include schemaLocation="ttml3-layout.xsd"/>
+  <xs:include schemaLocation="ttml3-animation.xsd"/>
   <xs:attributeGroup name="head.attlist">
     <xs:attributeGroup ref="tt:Core.attrib.class"/>
   </xs:attributeGroup>

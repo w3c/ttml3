@@ -5,12 +5,12 @@
   xmlns:ttm="http://www.w3.org/ns/ttml#metadata"
   xmlns:tts="http://www.w3.org/ns/ttml#styling"
   xmlns:tta="http://www.w3.org/ns/ttml#audio">
-  <xs:include schemaLocation="ttml2-core-attribs.xsd"/>
-  <xs:include schemaLocation="ttml2-metadata.xsd"/>
+  <xs:include schemaLocation="ttml3-core-attribs.xsd"/>
+  <xs:include schemaLocation="ttml3-metadata.xsd"/>
   <xs:import namespace="http://www.w3.org/ns/ttml#styling"
-    schemaLocation="ttml2-styling-attribs.xsd"/>
+    schemaLocation="ttml3-styling-attribs.xsd"/>
   <xs:import namespace="http://www.w3.org/ns/ttml#audio"
-    schemaLocation="ttml2-audio-attribs.xsd"/>
+    schemaLocation="ttml3-audio-attribs.xsd"/>
   <xs:attributeGroup name="StyleBinding.attrib.class">
     <xs:attribute name="style" type="xs:IDREFS"/>
   </xs:attributeGroup>

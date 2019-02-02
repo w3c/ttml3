@@ -1,0 +1,34 @@
+# .......................................................................
+# TTML3 Schema ..........................................................
+# .......................................................................
+
+# default namespace
+default namespace tt = "http://www.w3.org/ns/ttml"
+
+# generic tt modules
+include "ttml3-datatypes.rnc"
+include "ttml3-classes.rnc"
+include "ttml3-core-attribs.rnc"
+include "ttml3-parameter-attribs.rnc"
+include "ttml3-metadata-attribs.rnc"
+include "ttml3-styling-attribs.rnc"
+include "ttml3-audio-attribs.rnc"
+include "ttml3-timing-attribs.rnc"
+include "ttml3-parameter-items.rnc"
+include "ttml3-parameters.rnc"
+include "ttml3-metadata-items.rnc"
+include "ttml3-metadata.rnc"
+include "ttml3-styling.rnc"
+include "ttml3-animation.rnc"
+include "ttml3-layout.rnc"
+include "ttml3-embedded.rnc"
+include "ttml3-content.rnc"
+include "ttml3-head.rnc"
+include "ttml3-document.rnc"
+include "ttml3-isd.rnc"
+
+start = TTAF.tt | TTAF.parameters.profile | TTAF.isd.sequence
+
+# .......................................................................
+# .......................................................................
+# .......................................................................

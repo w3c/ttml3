@@ -5,10 +5,10 @@
   xmlns:ttd="http://www.w3.org/ns/ttml#datatype"
   xmlns:ttm="http://www.w3.org/ns/ttml#metadata">
   <xs:import namespace="http://www.w3.org/ns/ttml#datatype"
-    schemaLocation="ttml2-datatypes.xsd"/>
+    schemaLocation="ttml3-datatypes.xsd"/>
   <xs:import namespace="http://www.w3.org/ns/ttml"
-    schemaLocation="ttml2-core-attribs.xsd"/>
-  <xs:include schemaLocation="ttml2-metadata-attribs.xsd"/>
+    schemaLocation="ttml3-core-attribs.xsd"/>
+  <xs:include schemaLocation="ttml3-metadata-attribs.xsd"/>
   <xs:attributeGroup name="actor.attlist">
     <xs:attributeGroup ref="tt:Core.attrib.class"/>
     <xs:attributeGroup ref="tt:Core.Condition.attrib.class"/>

@@ -7,10 +7,10 @@
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="xml.xsd"/>
   <xs:import namespace="http://www.w3.org/ns/ttml#datatype"
-    schemaLocation="ttml2-datatypes.xsd"/>
+    schemaLocation="ttml3-datatypes.xsd"/>
   <xs:import namespace="http://www.w3.org/ns/ttml"
-    schemaLocation="ttml2-core-attribs.xsd"/>
-  <xs:include schemaLocation="ttml2-parameter-attribs.xsd"/>
+    schemaLocation="ttml3-core-attribs.xsd"/>
+  <xs:include schemaLocation="ttml3-parameter-attribs.xsd"/>
   <xs:attributeGroup name="profile.attlist">
     <xs:attributeGroup ref="tt:Core.ID.attrib.class"/>
     <xs:attribute name="combine" type="ttd:profileCombination"/>
