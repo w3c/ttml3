@@ -1,6 +1,6 @@
-# TTML2 EDITING GUIDELINES
+# TTML3 EDITING GUIDELINES
 
-The following guidelines apply to the various processes used in the development and maintenance of the TTML2 specification.
+The following guidelines apply to the various processes used in the development and maintenance of the TTML3 specification.
 
 ## Pull-Requests
 

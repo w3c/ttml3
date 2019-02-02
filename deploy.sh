@@ -36,18 +36,18 @@ SHA=`git rev-parse --verify HEAD`
 
 #define repo paths
 
-TTML2_BUILD_DIR="$TRAVIS_BUILD_DIR/spec/build"
-TTML2_SPEC_DIR="$TRAVIS_BUILD_DIR/spec"
+TTML3_BUILD_DIR="$TRAVIS_BUILD_DIR/spec/build"
+TTML3_SPEC_DIR="$TRAVIS_BUILD_DIR/spec"
 
 # build the specification
 
 echo -e "\n[TRACE] Building the specification"
-cd $TTML2_SPEC_DIR
+cd $TTML3_SPEC_DIR
 ant build
 
 # create the build directory, and checkout or create the target branch
 
-cd $TTML2_BUILD_DIR
+cd $TTML3_BUILD_DIR
 
 git init
 git remote add origin $REPO
@@ -65,22 +65,22 @@ echo -e "\n[TRACE] Adding build information"
 
 
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-  echo "[![Build Status](https://travis-ci.org/w3c/ttml2.svg?branch=$SOURCE_BRANCH)](https://travis-ci.org/w3c/ttml2)" >README.md
+  echo "[![Build Status](https://travis-ci.org/w3c/ttml3.svg?branch=$SOURCE_BRANCH)](https://travis-ci.org/w3c/ttml3)" >README.md
   echo -e "\n\n# Specification TTML 2\n" >>README.md
   echo -e "\nNote:\n" >>README.md
   echo -e "\nThis branch was automatically built by Travis CI. <b>DO NOT EDIT</b>.\n" >>README.md
 
-  echo -e "\n Branch [$SOURCE_BRANCH](https://github.com/w3c/ttml2/tree/$SOURCE_BRANCH)\n" >>README.md
+  echo -e "\n Branch [$SOURCE_BRANCH](https://github.com/w3c/ttml3/tree/$SOURCE_BRANCH)\n" >>README.md
 
   if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-    echo -e "\n Pull request: [#$TRAVIS_PULL_REQUEST](https://github.com/w3c/ttml2/pull/$TRAVIS_PULL_REQUEST)\n" >>README.md
+    echo -e "\n Pull request: [#$TRAVIS_PULL_REQUEST](https://github.com/w3c/ttml3/pull/$TRAVIS_PULL_REQUEST)\n" >>README.md
   fi
 
   if [ "$TRAVIS_PULL_REQUEST_SHA" != "" ]; then
-    echo -e "\n Commit: [$TRAVIS_PULL_REQUEST_SHA](https://github.com/w3c/ttml2/commit/$TRAVIS_PULL_REQUEST_SHA)" >>README.md
+    echo -e "\n Commit: [$TRAVIS_PULL_REQUEST_SHA](https://github.com/w3c/ttml3/commit/$TRAVIS_PULL_REQUEST_SHA)" >>README.md
   fi
 
-  echo -e "\nPull request specification can be previewed at https://rawgit.com/w3c/ttml2/$TARGET_BRANCH/index.html" >>README.md
+  echo -e "\nPull request specification can be previewed at https://rawgit.com/w3c/ttml3/$TARGET_BRANCH/index.html" >>README.md
 
   echo -e "\n\n" >>README.md
 fi
