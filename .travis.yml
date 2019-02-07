@@ -5,5 +5,5 @@ script:
 
 env:
   global:
-  - ENCRYPTION_LABEL: "6a4caf89d073"
-  - COMMIT_AUTHOR_EMAIL: "plh+deploy@w3.org"
+  - ENCRYPTION_LABEL: "de43fb6b3184"
+  - COMMIT_AUTHOR_EMAIL: "glenn+deploy@skynav.com"
