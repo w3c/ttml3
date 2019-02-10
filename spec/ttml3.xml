@@ -2302,8 +2302,12 @@ the following criteria are satisfied:</p>
 <specref ref="conformance-generic-processor"/>.</p>
 </item>
 <item>
-<p>The processor supports the TTML Transformation profile as specified
+<p>The processor supports the TTML3 Transformation profile as specified
 by <specref ref="profile-ttml3-transformation"/>.</p>
+</item>
+<item>
+<p>The processor supports the TTML2 Transformation profile as specified
+by <specref ref="profile-ttml2-transformation"/>.</p>
 </item>
 <item>
 <p>The processor supports the DFXP Transformation profile as specified
@@ -2321,8 +2325,12 @@ the following criteria are satisfied:</p>
 <specref ref="conformance-generic-processor"/>.</p>
 </item>
 <item>
-<p>The processor supports the TTML Presentation profile as specified
+<p>The processor supports the TTML3 Presentation profile as specified
 by <specref ref="profile-ttml3-presentation"/>.</p>
+</item>
+<item>
+<p>The processor supports the TTML2 Presentation profile as specified
+by <specref ref="profile-ttml2-presentation"/>.</p>
 </item>
 <item>
 <p>The processor supports the DFXP Presentation profile as specified
@@ -2354,8 +2362,8 @@ or included in the subset or superset profile.</p>
 <note role="clarification"><p>The definitions of
 <loc href="#conformance-transformation-processor">Transformation Processor Conformance</loc> and
 <loc href="#conformance-presentation-processor">Presentation Processor Conformance</loc> specified above require
-that each of these types of processors support (at a minimum) two specific profiles, a type specific profile defined by <bibref ref="ttml1"/>
-and a type specific profile defined by this specification.</p>
+that each of these types of processors support (at a minimum) three specific profiles, a type specific profile defined by <bibref ref="ttml1"/>,
+a type specific profile defined by <bibref ref="ttml2"/>, and a type specific profile defined by this specification.</p>
 <p>Notwithstanding this requirement, it is possible to construct a
 TTML <loc href="#terms-content-processor">content processor</loc>
 that performs transformation or presentation processing functions and satisfies
@@ -2384,28 +2392,26 @@ or one or more <loc href="#terms-top-level-profile">top-level</loc> <loc href="#
 <p><emph>This sub-section is non-normative.</emph></p>
   <div3 id="compatibility-forward">
     <head>Forward Compatibility</head>
-    <p>A conforming TTML1 processor may be able to process a TTML3
+    <p>A conforming TTML processor of a prior version of this specification may be able to process a TTML3
     <loc href="#terms-timed-text-content-document-instance">content document instance</loc>, provided it ignores unknown vocabulary
-    and ignores known vocabulary that appears in a context where it is not permitted in a conforming TTML1
+    and ignores known vocabulary that appears in a context where it is not permitted in a conforming TTML
     <loc href="#terms-timed-text-content-document-instance">content document instance</loc>;
     however, such processing may discard or fail to present content, or may present content differently than intended when processed
     by a conforming TTML3 processor.</p>
     <note role="example">
-      <p>For example, if a TTML1 processor ignores the <att>tts:ruby</att> attribute defined in TTML3, then that processor
-      may still present TTML3 content that uses ruby features, even though it would not be presented as intended. Similarly,
-      if a TTML1 processor encounters a <el>style</el> element as a child of another <el>style</el> element, then the former
-      nested style may be ignored (since this facility was not defined for TTML1).</p>
+      <p>For example, if a TTML processor conforming to a prior version of this specification ignores a style attribute newly defined in TTML3,
+      then that processor may still present TTML3 content that uses that attribute, even though it may not be presented as intended.</p>
     </note>
   </div3>
   <div3 id="compatibility-backward">
     <head>Backward Compatibility</head>
     <p>TTML3 is designed such that:</p>
       <ulist>
-        <item><p>A conforming TTML1 <loc href="#terms-timed-text-content-document-instance">content document instance</loc>
+        <item><p>A conforming TTML2 <loc href="#terms-timed-text-content-document-instance">content document instance</loc>
     is a conforming TTML3 <loc href="#terms-timed-text-content-document-instance">content document instance</loc>.</p></item>
-        <item><p>A conforming TTML3 processor processes a conforming TTML1
+        <item><p>A conforming TTML3 processor processes a conforming TTML2
     <loc href="#terms-timed-text-content-document-instance">content document instance</loc> such that the output produced by
-    the TTML3 processor is within the variations allowed per TTML1; however, it may emit warnings if it encounters deprecated features.</p></item>
+    the TTML3 processor is within the variations allowed per TTML2; however, it may emit warnings if it encounters deprecated features.</p></item>
       </ulist>
   </div3>
 </div2> <!-- compatibility -->
@@ -2823,7 +2829,7 @@ a normative name
 and designator for each
 predefined profile,
 and where each of these profiles is formally elaborated in
-<specref ref="standard-profiles"/>, in <bibref ref="ttml1"/>,
+<specref ref="standard-profiles"/>, in <bibref ref="ttml1"/>, in <bibref ref="ttml2"/>,
 or in another TTWG specification.</p>
 <table id="profile-vocab-table" role="common">
 <caption>Table 5-2 &ndash; Profiles</caption>
@@ -2851,6 +2857,18 @@ or in another TTWG specification.</p>
 <td><code>http://www.w3.org/ns/ttml/profile/sdp-us</code></td>
 </tr>
 <tr>
+<td>TTML2 Full</td>
+<td><code>http://www.w3.org/ns/ttml/profile/ttml2-full</code></td>
+</tr>
+<tr>
+<td>TTML2 Presentation</td>
+<td><code>http://www.w3.org/ns/ttml/profile/ttml2-presentation</code></td>
+</tr>
+<tr>
+<td>TTML2 Transformation</td>
+<td><code>http://www.w3.org/ns/ttml/profile/ttml2-transformation</code></td>
+</tr>
+<tr>
 <td>TTML3 Full</td>
 <td><code>http://www.w3.org/ns/ttml/profile/ttml3-full</code></td>
 </tr>
@@ -2865,7 +2883,8 @@ or in another TTWG specification.</p>
 </tbody>
 </table>
 <note role="seealso">
-<p>For definitions of the DFXP profiles, see <bibref ref="ttml1"/>. For definition of the SDP US profile, see <bibref ref="sdpus"/>.</p>
+<p>For definitions of the DFXP profiles, see <bibref ref="ttml1"/>. For definitions of the TTML2 profiles, see <bibref ref="ttml2"/>.
+For definition of the SDP US profile, see <bibref ref="sdpus"/>.</p>
 </note>
 </div4>
 </div3>
@@ -19781,12 +19800,12 @@ for future standardization.</p>
 as relative URIs (fragment identifiers) with respect to the 
 TT Feature Namespace base URI.</p>
 <p>When the definition of a feature designator in this section refers to the definition of the same feature designator
-in <bibref ref="ttml1"/> and the latter (referenced) definition uses the phrase "all defined values", then those
-values consist of all values defined in <bibref ref="ttml1"/>; otherwise, when the phrase "all defined values" appears
+in <bibref ref="ttml1"/> or <bibref ref="ttml2"/> and the latter (referenced) definition uses the phrase "all defined values", then those
+values consist of all values defined in <bibref ref="ttml1"/> or <bibref ref="ttml2"/>, respectively; otherwise, when the phrase "all defined values" appears
 directly below, then those values consist of all values defined in this specification.</p>
 <note role="clarification">
-<p>Feature designations in this section that have the suffix <code>-version-2</code> are newly defined by
-this (second) version of the TTML specification, i.e., TTML3.</p>
+<p>Feature designations in this section that have the suffix <code>-version-3</code> are newly defined by
+this (third) version of the TTML specification, i.e., TTML3.</p>
 </note>
 <div3 id="feature-animate">
 <head>#animate</head>
@@ -24337,7 +24356,7 @@ which is expressed as an XML document wherein the root element adheres to
 <p>The TTML3 Full Profile is intended to be used to
 express maximum compliance for both transformation and presentation processing.</p>
 <note role="elaboration">
-<p>This profile is a superset of the <loc href="#profile-dfxp-full">DFXP Full Profile</loc>.</p>
+<p>This profile is a superset of the <loc href="#profile-ttml2-full">TTML2 Full Profile</loc>.</p>
 </note>
 <eg xml:space="preserve">&profile-ttml3-full;</eg>
 </div2>
@@ -24346,7 +24365,7 @@ express maximum compliance for both transformation and presentation processing.<
 <p>The TTML3 Presentation Profile is intended to be used to
 express minimum compliance for presentation processing.</p>
 <note role="elaboration">
-<p>This profile is a superset of the <loc href="#profile-dfxp-presentation">DFXP Presentation Profile</loc>.</p>
+<p>This profile is a superset of the <loc href="#profile-ttml2-presentation">TTML2 Presentation Profile</loc>.</p>
 </note>
 <eg xml:space="preserve">&profile-ttml3-presentation;</eg>
 </div2>
@@ -24355,9 +24374,24 @@ express minimum compliance for presentation processing.</p>
 <p>The TTML3 Transformation Profile is intended to be used to
 express minimum compliance for transformation processing.</p>
 <note role="elaboration">
-<p>This profile is a superset of the <loc href="#profile-dfxp-transformation">DFXP Transformation Profile</loc>.</p>
+<p>This profile is a superset of the <loc href="#profile-ttml2-transformation">TTML2 Transformation Profile</loc>.</p>
 </note>
 <eg xml:space="preserve">&profile-ttml3-transformation;</eg>
+</div2>
+<div2 id="profile-ttml2-full">
+<head>TTML2 Full Profile</head>
+<p>The TTML2 Full Profile is specified by <bibref ref="ttml2"/>,
+<xspecref href="https://www.w3.org/TR/ttml2/#profile-ttml2-full">Appendix G.1, TTML2 Full Profile</xspecref>.</p>
+</div2>
+<div2 id="profile-ttml2-presentation">
+<head>TTML2 Presentation Profile</head>
+<p>The TTML2 Presentation Profile is specified by <bibref ref="ttml2"/>,
+<xspecref href="https://www.w3.org/TR/ttml2/#profile-ttml2-presentation">Appendix G.2, TTML2 Presentation Profile</xspecref>.</p>
+</div2>
+<div2 id="profile-ttml2-transformation">
+<head>TTML2 Transformation Profile</head>
+<p>The TTML2 Transformation Profile is specified by <bibref ref="ttml2"/>,
+<xspecref href="https://www.w3.org/TR/ttml2/#profile-ttml2-transformation">Appendix G.3, TTML2 Transformation Profile</xspecref>.</p>
 </div2>
 <div2 id="profile-dfxp-full">
 <head>DFXP Full Profile</head>
@@ -25475,9 +25509,14 @@ August 2011. (See
 <xspecref href="http://www.w3.org/TR/2011/REC-SVG11-20110816/">http://www.w3.org/TR/2011/REC-SVG11-20110816/</xspecref>.)
 </bibl>
 <bibl id="ttml1" key="TTML1">Glenn Adams and Pierre-Anthony Lemieux, Eds.,
-<titleref href="https://www.w3.org/TR/2018/PR-ttml1-20181004/">Timed Text Markup Language 1 (TTML1) (Third Edition)</titleref>,
-W3C Proposed Recommendation, 04 October 2018. (See
-<xspecref href="https://www.w3.org/TR/2018/PR-ttml1-20181004/">https://www.w3.org/TR/2018/PR-ttml1-20181004/</xspecref>.)
+<titleref href="https://www.w3.org/TR/2018/REC-ttml1-20181108/">Timed Text Markup Language 1 (TTML1) (Third Edition)</titleref>,
+W3C Recommendation, 08 November 2018. (See
+<xspecref href="https://www.w3.org/TR/2018/REC-ttml1-20181108/">https://www.w3.org/TR/2018/REC-ttml1-20181108/</xspecref>.)
+</bibl>
+<bibl id="ttml2" key="TTML2">Glenn Adams and Cyril Concolato, Eds.,
+<titleref href="https://www.w3.org/TR/2018/REC-ttml2-20181108/">Timed Text Markup Language 2 (TTML2)</titleref>,
+W3C Recommendation, 08 November 2018. (See
+<xspecref href="https://www.w3.org/TR/2018/REC-ttml2-20181108/">https://www.w3.org/TR/2018/REC-ttml2-20181108/</xspecref>.)
 </bibl>
 <bibl id="uaag" key="UAAG">Ian Jacobs, Jon Gunderson, and Eric Hansen, Eds.,
 <titleref href="http://www.w3.org/TR/2002/REC-UAAG10-20021217/">User
