@@ -2592,7 +2592,7 @@ element or attribute vocabulary items defined by a <loc href="#terms-private-mod
 In such case, a <loc href="#terms-content-processor">content processor</loc>
 that supports the <loc href="#terms-private-module">private module</loc> may employ one or more schemas associated with the
 <loc href="#terms-private-module">private module</loc> in order to augment a validity assessment that would normally be performed using only schemas
-associated with publicly registered modules. However, a <loc href="#terms-content-processor">content processor</loc>
+associated with <loc href="#terms-public-module">public modules</loc>. However, a <loc href="#terms-content-processor">content processor</loc>
 that does not support the <loc href="#terms-private-module">private module</loc> will prune unknown element and attribute vocabulary items
 according to the validity assessment rules described above, and, therefore, not report any potential invalidity that exists due to the
 use of such vocabulary items.</p>
