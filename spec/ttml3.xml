@@ -1204,13 +1204,6 @@ a set of author defined fonts and platform fonts for use during layout and prese
 process include the computed values of font related properties, the capabilities of individual fonts, and the text content being presented.</p>
 </def>
 </gitem>
-<gitem id="terms-private-module">
-<label>[private module]</label>
-<def>
-<p>An <loc href="#terms-external-module">external module</loc> that is not listed (registered) in the
-<loc href="#terms-module-registry">module registry</loc>.</p>
-</def>
-</gitem>
 <gitem id="terms-font-resource">
 <label>[font resource]</label>
 <def>
@@ -1437,17 +1430,19 @@ consist of one or more <loc href="#terms-inline-area">inline areas</loc>.</p>
 <gitem id="terms-module">
 <label>[module]</label>
 <def>
-<p>A collection of element types, attributes, features, or the specification(s) of such entities, where the definition of a module
-and the context of a reference to a module determine the nature of the defined or referenced entities. Modules may be defined
+<p>A collection of element types, attributes, features, or the specification(s) of such entities. Modules may be defined
 <loc href="#terms-internal-module">internally</loc> (within the specification of an edition or version of a TTML defining document)
-or <loc href="#terms-external-module">externally</loc> (in one or more separate documents).</p>
+or <loc href="#terms-external-module">externally</loc> (in one or more separate documents). Moreover, each module is designated as either
+<loc href="#terms-public-module">public</loc> or <loc href="#terms-private-module">private</loc>, according to whether it is listed
+in the <loc href="#terms-module-registry">module registry</loc> or not.</p>
 </def>
 </gitem>
 <gitem id="terms-module-registry">
 <label>[module registry]</label>
 <def>
 <p>A formally defined list of <loc href="#terms-module">modules</loc> associated with identifying information,
-as specified in the Timed Text Module Registry <bibref ref="ttmlmods"/>.</p>
+as specified in the Timed Text Module Registry <bibref ref="ttmlmods"/>. Each <loc href="#terms-module">module</loc>
+listed in the module registry is designated a <loc href="#terms-public-module">public module</loc>.</p>
 </def>
 </gitem>
 <gitem id="terms-nested-profile">
@@ -1607,6 +1602,13 @@ i.e., to present, <loc href="#terms-timed-text-markup-language">Timed Text Marku
 defined in this specification.</p>
 </def>
 </gitem>
+<gitem id="terms-private-module">
+<label>[private module]</label>
+<def>
+<p>An <loc href="#terms-external-module">external module</loc> that is not listed (registered) in the
+<loc href="#terms-module-registry">module registry</loc>.</p>
+</def>
+</gitem>
 <gitem id="terms-processor">
 <label>[processor]</label>
 <def>
@@ -1658,6 +1660,14 @@ the <loc href="#terms-effective-processor-profile">effective processor profile</
 <def>
 <p>A <loc href="#terms-feature-specification">feature specification</loc> or an <loc href="#terms-extension-specification">extension specification</loc>
 or the internal state representation thereof.</p>
+</def>
+</gitem>
+<gitem id="terms-public-module">
+<label>[public module]</label>
+<def>
+<p>A <loc href="#terms-module">module</loc>, either <loc href="#terms-internal-module">internal</loc>
+or <loc href="#terms-external-module">external</loc>, that is listed (registered) in the
+<loc href="#terms-module-registry">module registry</loc>.</p>
 </def>
 </gitem>
 <gitem id="terms-reduced-xml-infoset">
@@ -2539,12 +2549,7 @@ namespace names are listed in <specref ref="namespace-vocab-table"/>.
 <div2 id="ttml-content-doctype">
 <head>TTML Content Document Type</head>
 <p>The TTML Content Document Type is an <loc href="#terms-abstract-document-type">abstract document type</loc> of a profile
-of the Timed Text Markup Language intended to be used for interchange among distribution systems. This document type
-is defined in terms of <loc href="#terms-module">modules</loc> that specify element and attribute vocabulary,
-features, and other semantic behaviors, where such modules take the form of either (or both)
-<loc href="#terms-internal-module">internal modules</loc> defined (internally) within this document
-or <loc href="#terms-external-module">external modules</loc> defined (externally) with respect to this document,
-and where each module is listed in the <loc href="#terms-module-registry">module registry</loc>.</p>
+of the Timed Text Markup Language defined in terms of a collection of functional <loc href="#terms-module">modules</loc>.</p>
 <p>This specification references two types of schemas that may be used to validate a superset/subset
 of <loc href="#terms-timed-text-content-document-instance">timed text content document instances</loc>:</p>
 <ulist>
@@ -2588,7 +2593,7 @@ In such case, a <loc href="#terms-content-processor">content processor</loc>
 that supports the <loc href="#terms-private-module">private module</loc> may employ one or more schemas associated with the
 <loc href="#terms-private-module">private module</loc> in order to augment a validity assessment that would normally be performed using only schemas
 associated with publicly registered modules. However, a <loc href="#terms-content-processor">content processor</loc>
-that does not support the <loc href="#terms-private-module">private module</loc> will prune unknown element or attribute vocabulary items
+that does not support the <loc href="#terms-private-module">private module</loc> will prune unknown element and attribute vocabulary items
 according to the validity assessment rules described above, and, therefore, not report any potential invalidity that exists due to the
 use of such vocabulary items.</p>
 </note>
@@ -16688,7 +16693,7 @@ element type of <emph>E</emph> is not animation element type <el>animate</el> or
 and is not styling element type <el>style</el>,
 then for each style property
 <emph>P</emph> in the set of style properties defined
-above in <specref ref="styling-attribute-vocabulary"/>, perform the
+in <specref ref="styling-attribute-vocabulary"/> or in a supported <loc href="#terms-external-module">external module</loc>, perform the
 following ordered sub-steps:</p>
 <olist>
 <!-- (a) -->
@@ -16810,6 +16815,7 @@ do not perform the subsequent step below on <emph>E</emph>:</p>
 <item><p><loc href="#styling-vocabulary-style"><el>style</el></loc></p></item>
 <item><p><loc href="#terms-anonymous-span">anonymous span</loc></p></item>
 </ulist>
+<p>or a <loc href="#terms-styled-element">styled element</loc> defined in a supported <loc href="#terms-external-module">external module</loc>;</p>
 </item>
 <item><p> <phrase role="strong">[resolve computed styles]</phrase>
 determine (obtain) the computed style set <emph>CSS</emph> of
