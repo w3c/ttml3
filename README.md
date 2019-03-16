@@ -16,7 +16,7 @@ This branch was automatically built by Travis CI. <b>DO NOT EDIT</b>.
  Pull request: [#30](https://github.com/w3c/ttml3/pull/30)
 
 
- Commit: [eeb4d4e77e42a291ff17c711651d396cde457cff](https://github.com/w3c/ttml3/commit/eeb4d4e77e42a291ff17c711651d396cde457cff)
+ Commit: [e87ac3569923e52e8534e09cf83441bae3a11548](https://github.com/w3c/ttml3/commit/e87ac3569923e52e8534e09cf83441bae3a11548)
 
 Pull request specification can be previewed at https://rawgit.com/w3c/ttml3/issue-0029-module-framework-build/index.html
 
