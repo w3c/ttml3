@@ -1435,6 +1435,14 @@ consist of one or more <loc href="#terms-inline-area">inline areas</loc>.</p>
 or <loc href="#terms-external-module">externally</loc> (in one or more separate documents). Moreover, each module is designated as either
 <loc href="#terms-public-module">public</loc> or <loc href="#terms-private-module">private</loc>, according to whether it is listed
 in the <loc href="#terms-module-registry">module registry</loc> or not.</p>
+<note role="clarification">
+<p>A module is distinct from (and orthogonal to) a <loc href="#terms-profile">profile</loc> in the sense that the former
+defines functionality (regardless of application of use) while the latter selects functionality (for support by a processor
+or use by a document). Note also that a single specification may define functionality (either explicitly or implicitly) associated
+with a module and also define a profile. For example, this specification defines a collection of <loc href="#terms-internal-module">internal modules</loc>
+and also defines three <loc href="#terms-profile">profiles</loc>, about which see <specref ref="core-vocabulary-overview"/> and
+<specref ref="standard-profiles"/>, respectively.</p>
+</note>
 </def>
 </gitem>
 <gitem id="terms-module-registry">
@@ -1627,7 +1635,7 @@ must or may be implemented (supported) by a content processor.</p>
 <gitem id="terms-profile">
 <label>[profile]</label>
 <def>
-<p>A collection of <loc href="#terms-feature">features</loc> and <loc href="#terms-extension">extensions</loc>, which, when
+<p>A collection of <loc href="#terms-feature-specification">feature</loc> and <loc href="#terms-extension-specification">extension</loc> specifications, which, when
 interned (instantiated), is represented by a <loc href="#semantics-profile-state-profile-instance">profile instance</loc> state object.
 A profile is typed as a <loc href="#terms-content-profile">content profile</loc> or a <loc href="#terms-processor-profile">processor profile</loc>.</p>
 </def>
