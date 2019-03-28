@@ -1432,9 +1432,7 @@ consist of one or more <loc href="#terms-inline-area">inline areas</loc>.</p>
 <def>
 <p>A collection of element types, attributes, features, or the specification(s) of such entities. Modules may be defined
 <loc href="#terms-internal-module">internally</loc> (within the specification of an edition or version of a TTML defining document)
-or <loc href="#terms-external-module">externally</loc> (in one or more separate documents). Moreover, each module is designated as either
-<loc href="#terms-public-module">public</loc> or <loc href="#terms-private-module">private</loc>, according to whether it is listed
-in the <loc href="#terms-module-registry">module registry</loc> or not.</p>
+or <loc href="#terms-external-module">externally</loc> (in one or more separate documents).</p>
 <note role="clarification">
 <p>A module is distinct from (and orthogonal to) a <loc href="#terms-profile">profile</loc> in the sense that the former
 defines functionality (regardless of application of use) while the latter selects functionality (for support by a processor
@@ -1443,14 +1441,16 @@ with a module and also define a profile. For example, this specification defines
 and also defines three <loc href="#terms-profile">profiles</loc>, about which see <specref ref="core-vocabulary-overview"/> and
 <specref ref="standard-profiles"/>, respectively.</p>
 </note>
+<note role="elaboration">
+<p>Each module intended to be independently implemented is expected to be listed in the <loc href="#terms-module-registry">module registry</loc>.</p>
+</note>
 </def>
 </gitem>
 <gitem id="terms-module-registry">
 <label>[module registry]</label>
 <def>
 <p>A formally defined list of <loc href="#terms-module">modules</loc> associated with identifying information,
-as specified in the Timed Text Module Registry <bibref ref="ttmlmods"/>. Each <loc href="#terms-module">module</loc>
-listed in the module registry is designated a <loc href="#terms-public-module">public module</loc>.</p>
+as specified in the Timed Text Module Registry <bibref ref="ttmlmods"/>.</p>
 </def>
 </gitem>
 <gitem id="terms-nested-profile">
@@ -1610,13 +1610,6 @@ i.e., to present, <loc href="#terms-timed-text-markup-language">Timed Text Marku
 defined in this specification.</p>
 </def>
 </gitem>
-<gitem id="terms-private-module">
-<label>[private module]</label>
-<def>
-<p>An <loc href="#terms-external-module">external module</loc> that is not listed (registered) in the
-<loc href="#terms-module-registry">module registry</loc>.</p>
-</def>
-</gitem>
 <gitem id="terms-processor">
 <label>[processor]</label>
 <def>
@@ -1668,14 +1661,6 @@ the <loc href="#terms-effective-processor-profile">effective processor profile</
 <def>
 <p>A <loc href="#terms-feature-specification">feature specification</loc> or an <loc href="#terms-extension-specification">extension specification</loc>
 or the internal state representation thereof.</p>
-</def>
-</gitem>
-<gitem id="terms-public-module">
-<label>[public module]</label>
-<def>
-<p>A <loc href="#terms-module">module</loc>, either <loc href="#terms-internal-module">internal</loc>
-or <loc href="#terms-external-module">external</loc>, that is listed (registered) in the
-<loc href="#terms-module-registry">module registry</loc>.</p>
 </def>
 </gitem>
 <gitem id="terms-reduced-xml-infoset">
@@ -2596,12 +2581,12 @@ of a <loc href="#terms-timed-text-content-document">timed text content document<
 </note>
 <note role="clarification">
 <p>A <loc href="#terms-timed-text-content-document">timed text content document</loc> is not prohibited from using
-element or attribute vocabulary items defined by a <loc href="#terms-private-module">private module</loc>.
+element or attribute vocabulary items defined by a private (unregistered) module.
 In such case, a <loc href="#terms-content-processor">content processor</loc>
-that supports the <loc href="#terms-private-module">private module</loc> may employ one or more schemas associated with the
-<loc href="#terms-private-module">private module</loc> in order to augment a validity assessment that would normally be performed using only schemas
-associated with <loc href="#terms-public-module">public modules</loc>. However, a <loc href="#terms-content-processor">content processor</loc>
-that does not support the <loc href="#terms-private-module">private module</loc> will prune unknown element and attribute vocabulary items
+that supports the private module may employ one or more schemas associated with the
+private module in order to augment a validity assessment that would normally be performed using only schemas
+associated with public (registered) modules. However, a <loc href="#terms-content-processor">content processor</loc>
+that does not support the private module will prune unknown element and attribute vocabulary items
 according to the validity assessment rules described above, and, therefore, not report any potential invalidity that exists due to the
 use of such vocabulary items.</p>
 </note>
