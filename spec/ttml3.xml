@@ -2598,8 +2598,7 @@ to be used to represent the content of a
 <loc href="#terms-timed-text-content-document">timed text content document</loc>
 in such a manner that timing information is denoted in a non-hierarchical (flat), temporally linear manner, and where
 certain information, such as styling matter, may be resolved or merged in order to simplify subsequent processing.
-This document type is defined in terms of the element and attribute vocabulary
-specified in <specref ref="isd"/> and <specref ref="vocabulary"/>.</p>
+This document type is defined in terms of a collection of functional <loc href="#terms-module">modules</loc>.</p>
 <p>This specification references two types of schemas that may be used to validate
 <loc href="#terms-timed-text-intermediate-document-instance">timed text intermediate document instances</loc>:</p>
 <ulist>
@@ -2617,7 +2616,7 @@ of a <loc href="#terms-timed-text-intermediate-document">timed text intermediate
 <head>TTML Profile Document Type</head>
 <p>The TTML Profile Document Type is an <loc href="#terms-abstract-document-type">abstract document type</loc> intended
 to be used for defining and communicating constraints on the support or use of TTML features or extensions. This document type
-is defined in terms of the element and attribute vocabulary specified in <specref ref="vocabulary"/>.</p>
+is defined in terms of a collection of functional <loc href="#terms-module">modules</loc>.</p>
 <p>This specification references two types of schemas that may be used to validate
 <loc href="#terms-timed-text-profile-document-instance">timed text profile document instances</loc>:</p>
 <ulist>
