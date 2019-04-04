@@ -861,6 +861,9 @@ and the <loc href="#element-vocab-type-image">Image Module</loc> when they occur
   <loc href="#element-vocab-type-document">Document</loc> and <loc href="#element-vocab-type-head">Head</loc> Modules in
   <specref ref="element-vocab-table"/>.</p>
 </note>
+<p>In addition to the element types cited above, element types designated as content element types by an
+<loc href="#terms-external-module">external module</loc> that is listed in the <loc href="#terms-module-registry">module registry</loc>
+are also considered to be content elements.</p>
 </def>
 </gitem>
 <gitem id="terms-content-image">
@@ -1449,7 +1452,7 @@ and also defines three <loc href="#terms-profile">profiles</loc>, about which se
 <gitem id="terms-module-registry">
 <label>[module registry]</label>
 <def>
-<p>A formally defined list of <loc href="#terms-module">modules</loc> associated with identifying information,
+<p>A list of <loc href="#terms-module">modules</loc> associated with identifying information,
 as specified in the Timed Text Module Registry <bibref ref="ttmlmods"/>.</p>
 </def>
 </gitem>
@@ -6319,8 +6322,11 @@ the insertion of the parsed representation of that element (and its descendants)
 <loc href="#terms-reduced-xml-infoset">reduced xml infoset</loc> associated with the containing
 <loc href="#terms-document-instance">document instance</loc>.</p>
 </note>
-<p>The <att>condition</att> attribute may be used with any element in the core vocabulary catalog
-except profile matter, i.e., elements of the <loc href="#element-vocab-type-profile">Profile Module</loc>.</p>
+<p>The <att>condition</att> attribute may be used with (1) any element in the core vocabulary catalog
+except profile matter, i.e., elements of the <loc href="#element-vocab-type-profile">Profile Module</loc>, and
+(2) any element defined by an <loc href="#terms-external-module">external module</loc> that is
+listed in the <loc href="#terms-module-registry">module registry</loc>, where that element's type
+permits the specification of a <loc href="#content-attribute-condition"><att>condition</att></loc> attribute.</p>
 <p>The value of a <att>condition</att> attribute must adhere to a
 <loc href="#content-value-condition">&lt;condition&gt;</loc> expression
 which is evaluated at the time of presentation processing (lazy evaluation)
