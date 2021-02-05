@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/w3c/ttml3.svg?branch=master)](https://travis-ci.org/w3c/ttml3)
+[![Build Status](https://travis-ci.org/w3c/ttml3.svg?branch=main)](https://travis-ci.org/w3c/ttml3)
 
 # Timed Text Markup Language 3 (TTML3) Specification
 
