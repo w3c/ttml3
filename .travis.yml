@@ -1,9 +1,0 @@
-language: java
-
-script:
-    - bash ./deploy.sh
-
-env:
-  global:
-  - ENCRYPTION_LABEL: "20210209"
-  - COMMIT_AUTHOR_EMAIL: "glenn+deploy@skynav.com"
